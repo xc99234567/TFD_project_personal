@@ -1,0 +1,336 @@
+@import url(../vendors/CSS/reset.css);
+@import url(../vendors/Fonts/css/all.css);
+
+body {
+    background-color: #EEECE1;
+    box-sizing: border-box;
+    min-width: 1440px;
+}
+
+/* header */
+header {
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+}
+
+/* logo位置 */
+header .logo a {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 100px;
+    height: 100px;
+    margin: 10px 50px 10px 10px;
+}
+
+/* 導覽列 */
+header .nav_wrapper {
+    display: flex;
+    border-bottom: 5px solid #000;
+    width: 100%;
+}
+
+/* 當前頁面標示 */
+header .nav_wrapper .current_page{
+    background: #B47804;
+}
+
+/* 選項外層li大小 & 背景過場 */
+.nav_wrapper .nav_link {
+    width: 100px;
+    height: 40px;
+
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+/* 選項hover */
+/* , .nav_wrapper .nav_link:hover a (字的顏色看要不要改) */
+.nav_wrapper .nav_link:hover {
+    background-color: #B47804;
+    /* color: white; */
+}
+
+/* 選項內層a */
+.nav_wrapper .nav_link a {
+    display: inline-block;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+
+    /* 看要不要改字的顏色 */
+    /* transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear; */
+}
+
+/* 商品下拉選單hover */
+.nav_wrapper .product:hover .product_popover {
+    height: 150px;
+}
+
+/* 商品下拉選單wrapper */
+.nav_wrapper .nav_link .product_popover {
+    position: relative;
+    background: rgba(255, 255, 255);
+    text-align: center;
+    box-shadow: 1px 0px 5px rgba(0, 0, 0,.5);
+    /* display: none; */
+    height: 0;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.2s linear;
+    border-radius: 0 0 5px 5px;
+}
+
+/* 下拉選項內容 */
+.nav_wrapper .nav_link .product_popover a {
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 下拉選項內容 */
+.nav_wrapper .nav_link .product_popover a div {
+    height: 50px;
+    line-height: 50px;
+    transition: all 0.2s linear;
+}
+
+/* 下拉選項hover */
+.nav_wrapper .nav_link .product_popover a div:hover {
+    background: #B47804;
+}
+
+/* icon位置 */
+.nav_wrapper .icon_wrapper {
+    margin-left: auto;
+    padding-top: 15px;
+}
+
+/* icon內層a */
+.nav_wrapper .icon_wrapper a {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+/* icon大小 */
+.nav_wrapper .icon_wrapper a i {
+    color: black;
+    font-size: 20px;
+}
+
+/* cart */
+.icon_wrapper a .cart {
+    position: relative;
+}
+
+/* popover三角形 */
+.icon_wrapper a i .delta{
+    position: absolute;
+    border-width: 0px 0px;
+    border-color: transparent transparent rgba(255, 255, 255) transparent;
+    border-style: solid solid solid solid;
+    top: 15px;
+    right: 0;
+    z-index: 2;
+}
+
+/* popover wrapper */
+.icon_wrapper a i .cart_popover_wrapper {
+    position: absolute;
+    background: rgba(255, 255, 255);
+    width: 0px;
+    height: 0px;
+    right: 0;
+    top: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0,.5);
+    overflow: hidden;
+    transition: all .2s linear;
+    z-index: 1;
+    /* transition-delay: 0.2s; */
+}
+
+/* 三角形hover */
+.icon_wrapper a .cart:hover .delta{
+    border-width: 8px 9px;
+}
+
+/* wrapper hover */
+.icon_wrapper a .cart:hover .cart_popover_wrapper{
+    width: 200px;
+    height: 200px;
+}
+
+/* popover icon */
+.icon_wrapper a i .cart_popover_wrapper i {
+    font-size: 50px;
+    margin: 50px 67px 10px 67px;
+    visibility: hidden;
+}
+
+/* popover span */
+.icon_wrapper a i .cart_popover_wrapper span {
+    text-align: center;
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    width: 200px;
+    visibility: hidden;
+}
+
+/* popover icon span hover */
+.icon_wrapper a .cart:hover .cart_popover_wrapper i,
+.icon_wrapper a .cart:hover .cart_popover_wrapper span{
+    visibility: visible;
+}
+
+/* -------------------------------------------------------------- */
+
+/* footer */
+.footer_wrapper{
+    width: 100%;
+    background-color: #B47804;
+}
+
+/* footer上面 */
+.footer_wrapper .up_ele_wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* link wrapper */
+.footer_wrapper .up_ele_wrapper .link_wrapper{
+    width: 200px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* link title */
+.footer_wrapper .up_ele_wrapper .link_wrapper span{
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* link */
+.footer_wrapper .up_ele_wrapper .link_wrapper a{
+    display: inline-block;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    text-decoration: none;
+    color: rgba(0, 0, 0);
+}
+
+/* link hover */
+.footer_wrapper .up_ele_wrapper .link_wrapper a:hover{
+    opacity: 0.5;
+}
+
+/* center line */
+.footer_wrapper .up_ele_wrapper .white_line{
+    height: 120px;
+    width: 1px;
+    background: white;
+    margin: 48px 50px 30px 48px;
+}
+
+/* sns */
+.footer_wrapper .follow_us{
+    width: 140px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* sns title */
+.footer_wrapper .follow_us span{
+    display: block;
+    margin-bottom: 36px;
+    font-weight: bold;
+}
+
+/* sns link */
+.footer_wrapper .follow_us a{
+    color: black;
+    font-size: 28px;
+}
+
+/* sns link hover */
+.footer_wrapper .follow_us a:hover{
+    opacity: 0.5;
+}
+
+/* sns */
+.footer_wrapper .follow_us .sns_center{
+    margin: 0 10px;
+}
+
+/* 參考資料 */
+.down_ele_wrapper{
+    text-align: center;
+}
+
+/* ---------------------------------------------- */
+
+/* 頁碼 */
+.pages_wrapper{
+    margin-top: 25px;
+    height: 40px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* 各個頁數 */
+.pages_wrapper li{
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* 樣式 */
+.pages_wrapper li a{
+    display: inline-block;
+    background-color: white;
+    width: 30px;
+    height: 100%;
+    color: #000;
+    border: 1px solid #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all .2s linear;
+}
+
+/* 左右圓角 */
+.pages_wrapper li:first-child a{
+    border-radius: 10px 0 0 10px;
+}
+.pages_wrapper li:last-child a{
+    border-radius: 0 10px 10px 0;
+}
+
+/* 當前頁面題是 */
+.pages_wrapper li .current_page{
+    background-color: #B47804;
+    color: white;
+}
+
+/* hover */
+.pages_wrapper li a:hover{
+    background-color: #B47804;
+    color: white;
+}

@@ -1,0 +1,512 @@
+@import url(./common.css);
+
+main {
+    margin-top: 25px;
+}
+
+/* ---------------------------------------------- */
+
+/* 輪播圖 */
+.carousel {
+    width: 100%;
+    height: 480px;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+/* 輪播圖的wrapper */
+.carousel .acrousel_img_wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+/* 撐開img的a */
+.carousel a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+/* 圖的大小 */
+.carousel a .carousel_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 輪播的左右箭頭外層 */
+.carousel .carousel_arrow {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 60px;
+    background: transparent;
+    border-radius: 5px 0 0 5px;
+    text-align: center;
+    transition: all 0.2s linear;
+
+    /* display: none; */
+}
+
+/* 輪播圖hover箭頭出現 */
+.carousel:hover .carousel_arrow {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/* 外層hover游標改變 */
+.carousel .carousel_arrow:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+/* 左側箭頭外框圓角 */
+.carousel .left_arrow {
+    border-radius: 0 5px 5px 0;
+}
+
+/* 反轉左側icon */
+.carousel .left_arrow i {
+    transform: rotate(180deg);
+}
+
+/* 右側箭頭定位 */
+.carousel .right_arrow {
+    position: absolute;
+    right: 0;
+}
+
+/* icon樣式置中 */
+.carousel .carousel_arrow i {
+    color: transparent;
+    font-size: 25px;
+    line-height: 60px;
+    transition: color .2s linear;
+}
+
+/* icon hover */
+.carousel:hover .carousel_arrow i {
+    color: rgba(255, 255, 255, .8);
+}
+
+/* 輪播圖點wrapper */
+.carousel_dots_wrapper {
+    width: 120px;
+    height: 15px;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 45.8%;
+}
+
+/* 輪播點 */
+.carousel_dots_wrapper li {
+    width: 15px;
+    height: 3px;
+    background: white;
+    opacity: 0.3;
+}
+
+/* 目前所在圖顏色 */
+.carousel_dots_wrapper .current_dot {
+    background: white;
+    opacity: 1;
+}
+
+/* 改游標 */
+.carousel_dots_wrapper:hover .carousel_dot {
+    cursor: pointer;
+}
+
+/* 點hover */
+.carousel_dot:hover {
+    background: white;
+    opacity: 1;
+}
+
+/* ---------------------------------------------- */
+
+/* 主要產品區塊wrapper */
+.product_wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/* 區塊標題 */
+.product_wrapper h2 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* 黑色商品位置 */
+.product_wrapper .black_product_wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* 商品間的橫線 */
+.left_product::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    top: 50%;
+    background-color: #D5B2A0;
+    z-index: -1;
+    box-shadow: 0px 1px 10px gray;
+}
+
+/* 商品間的左斜線 */
+.left_product::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 10px;
+    top: 100%;
+    left: 0;
+    z-index: -1;
+    background-color: #D5B2A0;
+    transform: rotate(45deg);
+    box-shadow: 0px 1px 10px gray;
+}
+
+/* 商品間的右斜線 */
+.right_product::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 10px;
+    top: 100%;
+    left: 50%;
+    z-index: -1;
+    background-color: #D5B2A0;
+    transform: rotate(-45deg);
+    box-shadow: 0px 1px 10px gray;
+}
+
+/* 整個產品wrapper */
+.product_wrapper .black_product_wrapper .product_ele_wrapper {
+    width: 250px;
+    height: 300px;
+    /* border: 1px solid #000; */
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px black;
+}
+
+/* 產品圖 */
+.product_wrapper .black_product_wrapper .product_ele_wrapper .product_img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.product_wrapper .black_product_wrapper .product_ele_wrapper .post_img {
+    background-image: url(../imgs/main_product1.jpg);
+}
+
+.product_wrapper .black_product_wrapper .product_ele_wrapper .paper_img {
+    background-image: url(../imgs/main_product3.jpg);
+}
+
+/* 產品圖遮色片 */
+.product_wrapper .black_product_wrapper .product_ele_wrapper a .product_text_bg {
+    display: inline-block;
+    color: rgba(255, 255, 255, .8);
+    font-size: 28px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    line-height: 331px;
+    font-weight: bold;
+}
+
+/* 目前商品 */
+.product_wrapper .current_product_wrapper {
+    margin: 0 auto;
+    position: relative;
+    width: 300px;
+    height: 350px;
+    /* border: 1px solid #000; */
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px black;
+    overflow: hidden;
+}
+
+/* 目前商品圖 */
+.product_wrapper .current_product_wrapper .coin_img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    background-image: url(../imgs/main_product2.jpg);
+
+    transition: all 0.2s linear;
+}
+
+/* 圖片hover放大效果 */
+.product_wrapper .current_product_wrapper:hover>a {
+    transform: scale(1.05);
+}
+
+/* 目前商品文字 */
+.product_wrapper .current_product_wrapper .coin_img .coin_text_bg {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    color: rgba(255, 255, 255, .8);
+    font-size: 28px;
+    width: 100%;
+    height: 20%;
+    border-radius: 0 0 20px 20px;
+    background-color: rgba(0, 0, 0, .7);
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+}
+
+/* 箭頭 */
+.product_wrapper .arrow_wrapper {
+    position: absolute;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    bottom: 10%;
+    background: black;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: all .2s linear;
+}
+
+/* 箭頭hover */
+.product_wrapper .arrow_wrapper:hover{
+    opacity: 1;
+}
+
+/* 左右箭頭位置 */
+.product_wrapper .arr_left {
+    left: 10%;
+    transform: rotate(45deg);
+}
+
+.product_wrapper .arr_right {
+    right: 10%;
+    transform: rotate(-45deg);
+}
+
+/* 箭頭樣式 */
+.product_wrapper .arrow_wrapper i {
+    font-size: 48px;
+    line-height: 100px;
+    color: rgba(255, 255, 255, .8);
+}
+
+/* ---------------------------------------------- */
+
+/* 滾動背景 */
+.scroll_bg {
+    width: 100%;
+    height: 300px;
+    margin: 100px 0;
+    background-image: url(../imgs/scroll_bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: 10px 10px 50px black inset;
+}
+
+/* ---------------------------------------------- */
+
+/* 特色 */
+.feature_wrapper {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+/* 內容區 */
+.feature_wrapper .fea_content_wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 特色標題 */
+.feature_wrapper .fea_content_wrapper h2 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 特色元素 */
+.feature_wrapper .fea_content_wrapper .fea_item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+}
+
+/* 特色圖 */
+.feature_wrapper .fea_content_wrapper .fea_item img {
+    width: 591px;
+    height: 384px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+}
+
+/* 特色小標題 */
+.feature_wrapper .fea_content_wrapper .fea_item h3 {
+    font-size: 24px;
+    text-align: center;
+    margin: auto 0;
+    font-weight: bold;
+}
+
+/* 文字 */
+.feature_wrapper .fea_content_wrapper .fea_item h3 p{
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/* 文字背景色設定 */
+.feature_wrapper .fea_text_bg{
+    position: absolute;
+    z-index: -1;
+    width: 80%;
+    height: 250px;
+    background-color: #D5B2A0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+}
+.feature_wrapper .bg_1{
+    right: 0;
+    top: 145px;
+}
+.feature_wrapper .bg_2{
+    left: 0;
+    bottom: 67px;
+}
+
+/* ---------------------------------------------- */
+
+/* 最新消息 */
+.news_wrapper{
+    width: 100%;
+    background-color: #CBC1A9;
+}
+
+/* 內容區 */
+.news_wrapper .news_content_wrapper{
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/* 圖片wrapper */
+.news_wrapper .news_content_wrapper .img_wrapper{
+    margin: 50px 0;
+    width: 400px;
+    height: 300px;
+    position: relative;
+}
+
+/* 圖片 */
+.news_wrapper .news_content_wrapper .img_wrapper img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    opacity: 0.5;
+}
+
+/* 超連結按鈕 */
+.news_wrapper .news_content_wrapper .img_wrapper a{
+    position: absolute;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 28px;
+    background-color: #D5B2A0;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
+    left: 100px;
+    top: 125px;
+    transition: all .2s linear;
+}
+
+.news_wrapper .news_content_wrapper .img_wrapper a:hover{
+    transform: scale(1.1);
+}
+
+/* 右邊訊息wrapper */
+.news_wrapper .news_content_wrapper .news_ele_wrapper{
+    position: relative;
+    margin: 50px 0;
+}
+
+/* 各項消息 */
+.news_wrapper .news_content_wrapper .news_ele_wrapper li{
+    background-color: #EEECE1;
+    height: 80px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
+    margin-bottom: 10px;
+    transition: all .2s linear;
+}
+
+.news_wrapper .news_content_wrapper .news_ele_wrapper li:hover{
+    opacity: 0.7;
+}
+
+/* 消息超連結 */
+.news_wrapper .news_content_wrapper .news_ele_wrapper li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+/* 消息文字 */
+.news_wrapper .news_content_wrapper .news_ele_wrapper li a span{
+    display: inline-block;
+    color: #000;
+    font-size: 18px;
+}
+
+/* 文字日期 */
+.news_wrapper .news_content_wrapper .news_ele_wrapper li a .news_date{
+    background-color: rgb(194, 194, 194);
+    height: 22px;
+    line-height: 22px;
+    width: 90px;
+    border-radius: 0 10px 10px 0;
+    margin-right: 10px;
+}
+
+/* read more */
+.news_wrapper .news_content_wrapper .news_ele_wrapper>a{
+    position: absolute;
+    text-decoration: none;
+    color: #C9211E;
+    bottom: 0;
+    right: 0;
+}

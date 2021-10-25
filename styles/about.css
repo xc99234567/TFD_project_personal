@@ -1,0 +1,148 @@
+@import url(./common.css);
+
+
+main{
+    margin-top: 25px;
+}
+
+/* -------------------------------------------------------------- */
+
+/* banner */
+.banner img{
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
+
+/* -------------------------------------------------------------- */
+
+/* about */
+.about_wrapper{
+    width: 1200px;
+    margin: 100px auto;
+}
+
+/* 標題 */
+.about_wrapper h2{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* 內容wrapper */
+.about_wrapper .content_wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 圖片 */
+.about_wrapper .content_wrapper img{
+    width: 592px;
+    height: 373px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* 文字 */
+.about_wrapper .content_wrapper p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* -------------------------------------------------------------- */
+
+/* form */
+.contact_wrapper{
+    width: 100%;
+    background-color: #CBC1A9;
+    padding: 50px 0;
+}
+
+/* form內容wrapper */
+.contact_wrapper .content_wrapper{
+    width: 590px;
+    margin: 0 auto;
+}
+
+/* title */
+.contact_wrapper .content_wrapper h2{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+/* form */
+.contact_wrapper .content_wrapper form{
+    width: 100%;
+    /* border: 1px solid #000; */
+}
+
+/* form label */
+.contact_wrapper .content_wrapper form .text_ele label{
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* type error */
+.contact_wrapper .content_wrapper form .type_error span{
+    display: block;
+    float: right;
+    color: #C9211E;
+    font-weight: bold;
+}
+
+/* input error color */
+.contact_wrapper .content_wrapper form .type_error input{
+    background-color: rgba(243, 152, 150, 0.5);
+}
+
+/* input框 */
+.contact_wrapper .content_wrapper form .text_ele input{
+    width: 99%;
+    border-radius: 5px;
+    height: 24px;
+    font-size: 20px;
+}
+
+/* 中間黑線 */
+.contact_wrapper .content_wrapper form .text_ele .black_line{
+    width: 100%;
+    height: 2px;
+    background: #000;
+    margin: 32px auto;
+}
+
+/* 多行輸入框 */
+.contact_wrapper .content_wrapper form .text_ele textarea{
+    width: 99%;
+    border-radius: 5px;
+    resize: vertical;
+    min-height: 10rem;
+}
+
+/* 按鈕 */
+.contact_wrapper .content_wrapper form button{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #D5B2A0;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 1px 1px 5px black;
+    transition: all .2s linear;
+}
+
+.contact_wrapper .content_wrapper form button:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}

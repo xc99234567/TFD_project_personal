@@ -1,0 +1,132 @@
+@import url(./common.css);
+
+main{
+    margin-top: 25px;
+}
+
+/* -------------------------------------------------------------- */
+
+/* banner */
+.banner img{
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
+
+/* -------------------------------------------------------------- */
+
+/* news wrapper */
+.news_wrapper{
+    width: 794px;
+    margin: 100px auto;
+    position: relative;
+}
+
+/* news title */
+.news_wrapper h2{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* 切換按鈕 wrapper */
+.news_wrapper .switch_wrapper{
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 40px;
+}
+
+/* 切換的文字 */
+.news_wrapper .switch_wrapper span{
+    display: inline-block;
+}
+
+/* 切換的圖標 */
+.news_wrapper .switch_wrapper i{
+    margin-left: 5px;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+/* 當前模式樣式 */
+.news_wrapper .switch_wrapper .cuttent_mode{
+    background-color: #B47804;
+    color: white;
+}
+
+/* 按鈕hover */
+.news_wrapper .switch_wrapper i:hover{
+    cursor: pointer;
+    background-color: #B47804;
+    color: white;
+}
+
+/* 整個消息 */
+.news_wrapper .news_ele{
+    width: 100%;
+}
+
+/* news元素 */
+.news_wrapper .news_ele .news{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+
+/* news圖 */
+.news_wrapper .news_ele .news img{
+    display: block;
+    width: 285px;
+    height: 200px;
+    object-fit: fill;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    box-shadow: 1px 1px 5px black;
+    transition: transform 0.2s linear;
+}
+
+/* news圖hover */
+.news_wrapper .news_ele .news:hover img{
+    transform: scale(1.05);
+}
+
+/* 右側文字 */
+.news_wrapper .news_ele .news .news_text{
+    height: 200px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* 右側文字 */
+.news_wrapper .news_ele .news .news_text span{
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* 右側文字 */
+.news_wrapper .news_ele .news .news_text .news_date{
+    font-size: 18px;
+}
+.news_wrapper .news_ele .news .news_text .news_title{
+    font-size: 24px;
+}
+.news_wrapper .news_ele .news .news_text .news_content{
+    font-size: 20px;
+}
+
+/* read more */
+.news_wrapper .news_ele .news .news_text .news_read{
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    color: #C9211E;
+}

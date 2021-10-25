@@ -1,0 +1,68 @@
+@import url(./common.css);
+
+main{
+    margin-top: 25px;
+}
+
+/* -------------------------------------------------------------- */
+
+/* banner */
+.banner img{
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
+
+/* -------------------------------------------------------------- */
+
+/* QA */
+.qa_wrapper{
+    width: 794px;
+    margin: 100px auto;
+}
+
+.qa_wrapper h2{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.qa_wrapper .qa{
+    width: 100%;
+}
+
+.qa_wrapper .qa .qa_item{
+    width: 100%;
+    border-bottom: 1px solid #000;
+    display: flex;
+}
+
+.qa_wrapper .qa .qa_item:hover{
+    cursor: pointer;
+}
+
+
+.qa_wrapper .qa .qa_item span{
+    display: inline-block;
+    font-size: 20px;
+    padding: 15px 0;
+}
+
+.qa_wrapper .qa .qa_item .q_ordinal{
+    margin-right: 10px;
+    height: 100%;
+    font-weight: bold;
+}
+
+.qa_wrapper .qa .qa_item .qa_text{
+    display: inline-block;
+}
+
+.qa_wrapper .qa .qa_item .qa_text span:first-child{
+    font-weight: bold;
+}
+
+.qa_wrapper .qa .qa_item:hover span:first-child{
+    opacity: 0.7;
+}
