@@ -1,5 +1,5 @@
 // 陣列平均
-function array_avg(my_arr , digits) {
+function array_avg(my_arr, digits) {
     try {
         // 先確認是否為陣列
         if (!Array.isArray(my_arr)) {
@@ -56,4 +56,15 @@ function str_pad(my_num, digits) {
         my_num_str = "0" + my_num_str;
     }
     return my_num_str;
+}
+
+// 代入兩個時間看差「幾」天
+function DateDiff(date1, date2) {
+    let date_obj, date2_obj;
+
+    date1_obj = new Date(date1);
+    date2_obj = new Date(date2);
+
+    let days_diff = parseInt(Math.abs(date1_obj.getTime() - date2_obj.getTime()) / 86400000);
+    return days_diff;
 }
