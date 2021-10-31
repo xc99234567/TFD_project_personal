@@ -1,5 +1,8 @@
 window.onload = function(){
 
+    // 載入AOS
+    AOS.init();
+
     // 輪播套件
     var swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,

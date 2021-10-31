@@ -1,5 +1,6 @@
 @import url(../vendors/browser_init/reset.css);
 @import url(../vendors/Fonts/FontAwesome/css/all.css);
+@import url(../vendors/aos/aos.css);
 
 *{
     font-family: "Microsoft JhengHei", sans-serif;
@@ -89,7 +90,7 @@ header .nav_wrapper .current_page{
     /* display: none; */
     height: 0;
     overflow: hidden;
-    z-index: 1;
+    z-index: 2;
     transition: all 0.2s linear;
     border-radius: 0 0 5px 5px;
 }
@@ -144,7 +145,7 @@ header .nav_wrapper .current_page{
     border-style: solid solid solid solid;
     top: 15px;
     right: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* popover wrapper */
@@ -159,7 +160,7 @@ header .nav_wrapper .current_page{
     box-shadow: 0px 0px 5px rgba(0, 0, 0,.5);
     overflow: hidden;
     transition: all .2s linear;
-    z-index: 1;
+    z-index: 2;
     /* transition-delay: 0.2s; */
 }
 
