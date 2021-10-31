@@ -1,6 +1,7 @@
 @import url(../vendors/browser_init/reset.css);
 @import url(../vendors/Fonts/FontAwesome/css/all.css);
 @import url(../vendors/aos/aos.css);
+@import url(../vendors/animate_css/Animate.css);
 
 *{
     font-family: "Microsoft JhengHei", sans-serif;
