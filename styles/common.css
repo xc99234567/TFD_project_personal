@@ -1,5 +1,5 @@
-@import url(../vendors/CSS/reset.css);
-@import url(../vendors/Fonts/css/all.css);
+@import url(../vendors/browser_init/reset.css);
+@import url(../vendors/Fonts/FontAwesome/css/all.css);
 
 *{
     font-family: "Microsoft JhengHei", sans-serif;
