@@ -14,6 +14,12 @@ main {
     margin-bottom: 100px;
 }
 
+/* 輪播游標改手 */
+.swiper:hover{
+    cursor: pointer;
+}
+
+/* 套件給的 */
 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -33,6 +39,7 @@ main {
     align-items: center;
 }
 
+/* 輪播的圖 */
 .swiper-slide img {
     display: block;
     width: 100%;
@@ -40,24 +47,47 @@ main {
     object-fit: cover;
 }
 
+/* 左右按鈕 */
 .swiper .swiper-button {
     position: absolute;
-    opacity: .7;
-    display: none;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.2s;
 }
 
+/* 游標移入輪播 箭頭出現 */
 .swiper:hover .swiper-button {
-    display: block;
+    opacity: 0.5;
 }
 
-.swiper .swiper-button-next {
-    right: 0;
+/* 箭頭樣式 */
+.swiper .swiper-button::after{
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
 }
 
+/* 上一頁箭頭 */
 .swiper .swiper-button-prev {
     left: 0;
+    border-radius: 0 5px 5px 0;
 }
 
+/* 下一頁箭頭 */
+.swiper .swiper-button-next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+/* 移入箭頭hover */
+.swiper .swiper-button:hover{
+    opacity: 1;
+}
+
+/* 下面的點 */
+.swiper .swiper-pagination .swiper-pagination-bullet-active{
+    background: rgba(255, 255, 255, .8);
+}
 
 /* ---------------------------------------------- */
 

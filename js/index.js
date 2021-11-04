@@ -1,16 +1,13 @@
-window.onload = function(){
+window.onload = function () {
 
     // 載入AOS
     AOS.init();
 
     // 輪播套件
     var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
         spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-            delay: 10000,
-            disableOnInteraction: false,
-        },
+        loop: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -20,5 +17,4 @@ window.onload = function(){
             prevEl: ".swiper-button-prev",
         },
     });
-
 }

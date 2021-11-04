@@ -38,12 +38,45 @@ main{
     align-items: center;
 }
 
+/* 圖片wrapper */
+.about_wrapper .content_wrapper .img_wrapper{
+    position: relative;
+    width: 592px;
+    height: 373px;
+}
+
 /* 圖片 */
-.about_wrapper .content_wrapper img{
+.about_wrapper .content_wrapper .img_wrapper img{
+    position: absolute;
     width: 592px;
     height: 373px;
     object-fit: cover;
     border-radius: 20px;
+    opacity: 0;
+    animation: about_img 20s linear infinite;
+}
+
+.about_wrapper .content_wrapper .img_wrapper img:nth-child(2){
+    animation-delay: 5s;
+}
+.about_wrapper .content_wrapper .img_wrapper img:nth-child(3){
+    animation-delay: 10s;
+}
+.about_wrapper .content_wrapper .img_wrapper img:nth-child(4){
+    animation-delay: 15s;
+}
+
+/* 圖片輪播動畫 */
+@keyframes about_img {
+    10%{
+        opacity: 1;
+    }
+    20%{
+        opacity: .5;
+    }
+    30%{
+        opacity: 0;
+    }
 }
 
 /* 文字 */
