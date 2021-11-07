@@ -1,21 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // 關於我們圖切換
-    // let img_arr = [1, 2, 3, 4];
-    // let img_index = 0;
-    // setInterval(function () {
-    //     let about_img = document.getElementById("about_img");
-    //     about_img.style.opacity = 0;
-    //     if(img_index == img_arr.length - 1){
-    //         img_index = 0;
-    //     }else{
-    //         img_index += 1;
-    //     }
-        
-    //     about_img.src = `./imgs/about${img_arr[img_index]}.jpg`
+    // 表單正規
+    const text_ele = document.querySelectorAll("form .text_ele");
+    const inputs = document.querySelectorAll("form .text_ele input");
+    console.log(text_ele);
+    console.log(inputs);
 
-    // }, 2000);
-
-
-
+    
 });

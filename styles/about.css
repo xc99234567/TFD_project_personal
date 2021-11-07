@@ -129,6 +129,7 @@ main{
     float: right;
     color: #C9211E;
     font-weight: bold;
+    /* display: none; */
 }
 
 /* input error color */

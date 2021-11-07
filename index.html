@@ -17,26 +17,28 @@
                 <img src="./imgs/logo.png" alt="">
             </a>
         </h1>
-        <ul class="nav_wrapper">
-            <li class="nav_link"><a href="./about.html">關於我們</a></li>
-            <li class="nav_link"><a href="./news.html">最新消息</a></li>
-            <li class="nav_link product">
-                <a href="./product_list.html">商品</a>
-                <div class="product_popover">
-                    <a href="./product_list.html">
-                        <div>郵票</div>
-                    </a>
-                    <a href="./product_list.html" class="coin">
-                        <div>硬幣</div>
-                    </a>
-                    <a href="./product_list.html">
-                        <div>紙幣</div>
-                    </a>
-                </div>
-            </li>
-            <li class="nav_link"><a href="./appraisal.html">鑑定收購</a></li>
-            <li class="nav_link"><a href="./qa.html">常見問題</a></li>
-            <li class="icon_wrapper">
+        <nav>
+            <ul class="menu_wrapper">
+                <li class="nav_link"><a href="./about.html">關於我們</a></li>
+                <li class="nav_link"><a href="./news.html">最新消息</a></li>
+                <li class="nav_link product">
+                    <a href="./product_list.html">商品<i class="fas fa-chevron-up"></i></a>
+                    <div class="product_popover">
+                        <a href="./product_list.html">
+                            <div>郵票</div>
+                        </a>
+                        <a href="./product_list.html" class="coin">
+                            <div>硬幣</div>
+                        </a>
+                        <a href="./product_list.html">
+                            <div>紙幣</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav_link"><a href="./appraisal.html">鑑定收購</a></li>
+                <li class="nav_link"><a href="./qa.html">常見問題</a></li>
+            </ul>
+            <div class="icon_wrapper">
                 <a href="#" aria-label='會員'><i class="fas fa-user"></i></a>
                 <a href="#">
                     <i class="fas fa-shopping-cart cart">
@@ -47,27 +49,16 @@
                         </div>
                     </i>
                 </a>
-            </li>
-        </ul>
+                <button class="hamburger hamburger--slider" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+            <div class="mask"></div>
+        </nav>
     </header>
     <main>
-        <!-- 輪播圖 -->
-        <!-- <div class="carousel">
-            <div class="acrousel_img_wrapper">
-                <a href="#"><img src="./imgs/carousel1.jpg" alt="" class="carousel_img"></a>
-            </div>
-            <div class="carousel_arrow left_arrow"><i class="fas fa-chevron-right"></i></i></div>
-            <div class="carousel_arrow right_arrow"><i class="fas fa-chevron-right"></i></i></div>
-
-            <ul class="carousel_dots_wrapper">
-                <li class="carousel_dot current_dot"></li>
-                <li class="carousel_dot"></li>
-                <li class="carousel_dot"></li>
-                <li class="carousel_dot"></li>
-                <li class="carousel_dot"></li>
-            </ul>
-        </div> -->
-
         <!-- 輪播圖 -->
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -153,10 +144,8 @@
                 </div>
             </div>
             <!-- 文字介紹被景色 -->
-            <div class="fea_text_bg bg_1" data-aos="fade-left" data-aos-duration="2000" data-aos-anchor=".fea_img1"
-                data-aos-once="true"></div>
-            <div class="fea_text_bg bg_2" data-aos="fade-right" data-aos-duration="2000" data-aos-anchor=".fea_img2"
-                data-aos-once="true"></div>
+            <div class="fea_text_bg bg_1" data-aos="zoom-out-top"  data-aos-once="true"></div>
+            <div class="fea_text_bg bg_2" data-aos="zoom-out-top"  data-aos-once="true"></div>
         </div>
 
         <!-- 最新消息 -->
@@ -226,9 +215,11 @@
         </div>
     </footer>
 
-    <script src="./js/index.js"></script>
+    <script src="./vendors/JQuery/jquery-3.6.0.js"></script>
     <script src="./vendors/carousel/swiper/swiper.js"></script>
     <script src="./vendors/aos/aos.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/common.js"></script>
 </body>
 
 </html>
