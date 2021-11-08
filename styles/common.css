@@ -3,8 +3,7 @@
 @import url(../vendors/aos/aos.css);
 @import url(../vendors/animate_css/Animate.css);
 @import url(../vendors/hamburgers/hamburgers.css);
-
-*{
+* {
     font-family: "Microsoft JhengHei", sans-serif;
 }
 
@@ -14,6 +13,7 @@ body {
 }
 
 /* header */
+
 header {
     margin: 0 auto;
     width: 100%;
@@ -185,12 +185,6 @@ header .menu_wrapper .current_page {
     /* transition-delay: 0.2s; */
 }
 
-/* 三角形hover */
-
-.icon_wrapper a .cart:hover .delta {
-    border-width: 8px 9px;
-}
-
 /* popover icon */
 
 .icon_wrapper a i .cart_popover_wrapper i {
@@ -250,6 +244,10 @@ header .menu_wrapper .current_page {
     .menu_wrapper .product:hover .product_popover {
         height: 150px;
     }
+    /* 三角形hover */
+    .icon_wrapper a .cart:hover .delta {
+        border-width: 8px 9px;
+    }
     /* wrapper hover */
     .icon_wrapper a .cart:hover .cart_popover_wrapper {
         width: 200px;
@@ -267,29 +265,28 @@ header .menu_wrapper .current_page {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: rgba(255, 255, 255, .3);
-        position: relative;
+        background: rgba(255, 255, 255, .9);
+        position: fixed;
         box-shadow: 0px 0 5px black;
+        z-index: 3;
+        top: 0;
     }
-
     /* logo */
     header .logo a img {
         width: 60px;
         height: 60px;
     }
-
     /* 最外層nav */
     header nav {
         border-bottom: none;
         display: flex;
         flex-direction: row-reverse;
     }
-
     /* 導覽列 */
     header nav .menu_wrapper {
         /* border: 1px solid #000; */
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 82.4px;
         width: 200px;
         height: 0vh;
         overflow: hidden;
@@ -297,18 +294,15 @@ header .menu_wrapper .current_page {
         box-shadow: 0 0px 5px black;
         transition: height 0.1s;
     }
-
     /* 導覽列切換展開時 */
     header nav .menu-on {
         height: 100vh;
         z-index: 2;
     }
-
     /* 各個選項 */
     .menu_wrapper .nav_link {
         width: 100%;
     }
-
     /* 中間的線 */
     .menu_wrapper .nav_link::after {
         display: block;
@@ -319,30 +313,25 @@ header .menu_wrapper .current_page {
         border-bottom: 2px solid #000;
         background: black;
     }
-
     /* 商品選項變色 */
     .menu_wrapper .product:hover>a {
         background-color: #B47804;
     }
-
     /* 箭頭icon定位 */
     .menu_wrapper .product a i {
         position: absolute;
         right: 5%;
         transition: all .2s;
     }
-
     /* 箭頭切換變形 */
     .menu_wrapper .product a .i-turn {
         transform: rotate(180deg);
     }
-
     /* 商品下拉展開切換 */
     .menu_wrapper .product .ham-on {
         height: 150px;
         background-color: #CBC1A9;
     }
-
     /* 商品下拉wrapper */
     header nav .icon_wrapper {
         display: flex;
@@ -352,7 +341,6 @@ header .menu_wrapper .current_page {
         margin-right: 10px;
         width: 200px;
     }
-
     /* 漢堡按鈕 */
     header nav .icon_wrapper .hamburger {
         width: 25px;
@@ -361,7 +349,6 @@ header .menu_wrapper .current_page {
         margin-bottom: 10px;
         /* margin-left: 10px; */
     }
-
     /* 漢堡按鈕樣式 */
     header nav .icon_wrapper .hamburger span {
         width: 100%;
@@ -371,7 +358,6 @@ header .menu_wrapper .current_page {
         margin-top: 1px;
         height: 3px;
     }
-
     /* 展開時黑幕 */
     nav .mask {
         position: fixed;
@@ -383,7 +369,6 @@ header .menu_wrapper .current_page {
         opacity: 0;
         transition: opacity 0.5s;
     }
-
     /* 黑幕切換展開 */
     nav .mask-on {
         opacity: .5;
@@ -394,13 +379,15 @@ header .menu_wrapper .current_page {
 /* -------------------------------------------------------------- */
 
 /* footer */
-.footer_wrapper{
+
+.footer_wrapper {
     width: 100%;
     background-color: #B47804;
 }
 
 /* footer上面 */
-.footer_wrapper .up_ele_wrapper{
+
+.footer_wrapper .up_ele_wrapper {
     width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -409,21 +396,24 @@ header .menu_wrapper .current_page {
 }
 
 /* link wrapper */
-.footer_wrapper .up_ele_wrapper .link_wrapper{
+
+.footer_wrapper .up_ele_wrapper .link_wrapper {
     width: 200px;
     margin-top: 50px;
     text-align: center;
 }
 
 /* link title */
-.footer_wrapper .up_ele_wrapper .link_wrapper span{
+
+.footer_wrapper .up_ele_wrapper .link_wrapper span {
     display: block;
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
 /* link */
-.footer_wrapper .up_ele_wrapper .link_wrapper a{
+
+.footer_wrapper .up_ele_wrapper .link_wrapper a {
     display: inline-block;
     margin-bottom: 1rem;
     margin-left: 1rem;
@@ -432,12 +422,14 @@ header .menu_wrapper .current_page {
 }
 
 /* link hover */
-.footer_wrapper .up_ele_wrapper .link_wrapper a:hover{
+
+.footer_wrapper .up_ele_wrapper .link_wrapper a:hover {
     opacity: 0.5;
 }
 
 /* center line */
-.footer_wrapper .up_ele_wrapper .white_line{
+
+.footer_wrapper .up_ele_wrapper .white_line {
     height: 120px;
     width: 1px;
     background: white;
@@ -445,44 +437,51 @@ header .menu_wrapper .current_page {
 }
 
 /* sns */
-.footer_wrapper .follow_us{
+
+.footer_wrapper .follow_us {
     width: 140px;
     margin-top: 50px;
     text-align: center;
 }
 
 /* sns title */
-.footer_wrapper .follow_us span{
+
+.footer_wrapper .follow_us span {
     display: block;
     margin-bottom: 36px;
     font-weight: bold;
 }
 
 /* sns link */
-.footer_wrapper .follow_us a{
+
+.footer_wrapper .follow_us a {
     color: black;
     font-size: 28px;
 }
 
 /* sns link hover */
-.footer_wrapper .follow_us a:hover{
+
+.footer_wrapper .follow_us a:hover {
     opacity: 0.5;
 }
 
 /* sns */
-.footer_wrapper .follow_us .sns_center{
+
+.footer_wrapper .follow_us .sns_center {
     margin: 0 10px;
 }
 
 /* 參考資料 */
-.down_ele_wrapper{
+
+.down_ele_wrapper {
     text-align: center;
 }
 
 /* ---------------------------------------------- */
 
 /* 頁碼 */
-.pages_wrapper{
+
+.pages_wrapper {
     margin-top: 25px;
     height: 40px;
     display: flex;
@@ -493,14 +492,16 @@ header .menu_wrapper .current_page {
 }
 
 /* 各個頁數 */
-.pages_wrapper li{
+
+.pages_wrapper li {
     height: 100%;
     text-align: center;
     line-height: 40px;
 }
 
 /* 樣式 */
-.pages_wrapper li a{
+
+.pages_wrapper li a {
     display: inline-block;
     background-color: white;
     width: 30px;
@@ -514,21 +515,25 @@ header .menu_wrapper .current_page {
 }
 
 /* 左右圓角 */
-.pages_wrapper li:first-child a{
+
+.pages_wrapper li:first-child a {
     border-radius: 10px 0 0 10px;
 }
-.pages_wrapper li:last-child a{
+
+.pages_wrapper li:last-child a {
     border-radius: 0 10px 10px 0;
 }
 
 /* 當前頁面題是 */
-.pages_wrapper li .current_page{
+
+.pages_wrapper li .current_page {
     background-color: #B47804;
     color: white;
 }
 
 /* hover */
-.pages_wrapper li a:hover{
+
+.pages_wrapper li a:hover {
     background-color: #B47804;
     color: white;
 }
