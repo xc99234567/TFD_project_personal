@@ -1,4 +1,4 @@
-window.onload = function () {
+$(document).ready(function () {
 
     // 載入AOS
     AOS.init();
@@ -17,4 +17,4 @@ window.onload = function () {
             prevEl: ".swiper-button-prev",
         },
     });
-}
+});

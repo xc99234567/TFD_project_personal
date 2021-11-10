@@ -259,14 +259,14 @@ header .menu_wrapper .current_page {
     }
 }
 
-@media (max-width: 767.8px) {
+@media (max-width: 767.98px) {
     /* header */
     header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         background: rgba(255, 255, 255, .9);
-        position: fixed;
+        position: sticky;
         box-shadow: 0px 0 5px black;
         z-index: 3;
         top: 0;
@@ -281,6 +281,7 @@ header .menu_wrapper .current_page {
         border-bottom: none;
         display: flex;
         flex-direction: row-reverse;
+        
     }
     /* 導覽列 */
     header nav .menu_wrapper {
@@ -289,14 +290,14 @@ header .menu_wrapper .current_page {
         top: 82.4px;
         width: 200px;
         height: 0vh;
-        overflow: hidden;
         background-color: #CBC1A9;
         box-shadow: 0 0px 5px black;
         transition: height 0.1s;
+        overflow: auto;
     }
     /* 導覽列切換展開時 */
     header nav .menu-on {
-        height: 100vh;
+        height: 100%;
         z-index: 2;
     }
     /* 各個選項 */
@@ -367,12 +368,14 @@ header .menu_wrapper .current_page {
         left: 0;
         background-color: rgba(0, 0, 0);
         opacity: 0;
+        visibility: hidden;
         transition: opacity 0.5s;
     }
     /* 黑幕切換展開 */
     nav .mask-on {
         opacity: .5;
         z-index: 2;
+        visibility: visible;
     }
 }
 
@@ -388,7 +391,8 @@ header .menu_wrapper .current_page {
 /* footer上面 */
 
 .footer_wrapper .up_ele_wrapper {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -430,7 +434,6 @@ header .menu_wrapper .current_page {
 /* center line */
 
 .footer_wrapper .up_ele_wrapper .white_line {
-    height: 120px;
     width: 1px;
     background: white;
     margin: 48px 50px 30px 48px;
