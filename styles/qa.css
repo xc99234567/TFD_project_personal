@@ -13,12 +13,21 @@ main{
     object-fit: cover;
 }
 
+@media (max-width: 767.98px){
+    .banner img {
+        height: 360px;
+    }
+}
+
 /* -------------------------------------------------------------- */
 
 /* QA */
 .qa_wrapper{
-    width: 794px;
+    box-sizing: border-box;
+    max-width: 794px;
+    width: 100%;
     margin: 100px auto;
+    padding: 0 10px;
 }
 
 .qa_wrapper h2{
@@ -36,6 +45,7 @@ main{
     width: 100%;
     border-bottom: 1px solid #000;
     display: flex;
+    overflow: hidden;
 }
 
 .qa_wrapper .qa .qa_item:hover{
@@ -60,9 +70,21 @@ main{
 }
 
 .qa_wrapper .qa .qa_item .qa_text span:first-child{
+    display: block;
     font-weight: bold;
+    transition: color .4s;
 }
 
 .qa_wrapper .qa .qa_item:hover span:first-child{
-    opacity: 0.7;
+    color: #B47804;
+}
+
+.qa_wrapper .qa .qa_item .qa_text .qa_content{
+    font-size: 18px;
+    display: none;
+    transition: margin .4s;
+}
+
+.qa_wrapper .qa .qa_item .qa_text .-on{
+    margin: 10px 0;
 }

@@ -17,26 +17,28 @@
                 <img src="./imgs/logo.png" alt="">
             </a>
         </h1>
-        <ul class="nav_wrapper">
-            <li class="nav_link"><a href="./about.html">關於我們</a></li>
-            <li class="nav_link"><a href="./news.html">最新消息</a></li>
-            <li class="nav_link product">
-                <a href="./product_list.html">商品</a>
-                <div class="product_popover">
-                    <a href="./product_list.html">
-                        <div>郵票</div>
-                    </a>
-                    <a href="./product_list.html" class="coin">
-                        <div>硬幣</div>
-                    </a>
-                    <a href="./product_list.html">
-                        <div>紙幣</div>
-                    </a>
-                </div>
-            </li>
-            <li class="nav_link"><a href="./appraisal.html">鑑定收購</a></li>
-            <li class="nav_link current_page"><a href="./qa.html">常見問題</a></li>
-            <li class="icon_wrapper">
+        <nav>
+            <ul class="menu_wrapper">
+                <li class="nav_link"><a href="./about.html">關於我們</a></li>
+                <li class="nav_link"><a href="./news.html">最新消息</a></li>
+                <li class="nav_link product">
+                    <a href="./product_list.html">商品<i class="fas fa-chevron-up"></i></a>
+                    <div class="product_popover">
+                        <a href="./product_list.html">
+                            <div>郵票</div>
+                        </a>
+                        <a href="./product_list.html" class="coin">
+                            <div>硬幣</div>
+                        </a>
+                        <a href="./product_list.html">
+                            <div>紙幣</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav_link"><a href="./appraisal.html">鑑定收購</a></li>
+                <li class="nav_link"><a href="./qa.html">常見問題</a></li>
+            </ul>
+            <div class="icon_wrapper">
                 <a href="#" aria-label='會員'><i class="fas fa-user"></i></a>
                 <a href="#">
                     <i class="fas fa-shopping-cart cart">
@@ -47,13 +49,18 @@
                         </div>
                     </i>
                 </a>
-            </li>
-        </ul>
+                <button class="hamburger hamburger--slider" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+            <div class="mask"></div>
+        </nav>
     </header>
     <main>
         <!-- banner -->
         <div class="banner"><img src="./imgs/carousel2.jpg" alt=""></div>
-
         <!-- Q&A -->
         <div class="qa_wrapper">
             <h2>常見問題</h2>
@@ -62,31 +69,35 @@
                     <span class="q_ordinal">Q1.</span>
                     <div class="qa_text">
                         <span>不知道該如何將郵票分類？</span>
+                        <p class="qa_content">不常在接觸的人確實會有這個困擾，如果真的不知道的話，歡迎與我們聯繫詢問。</p>
                     </div>
                 </li>
                 <li class="qa_item">
                     <span class="q_ordinal">Q2.</span>
                     <div class="qa_text">
                         <span>鑑定前聯絡時，收藏品的照片該如何拍攝？</span>
+                        <p class="qa_content">不用每項商品都分別拍攝，只要一張拍攝到全部收藏的照片即可。</p>
                     </div>
                 </li>
                 <li class="qa_item">
                     <span class="q_ordinal">Q3.</span>
                     <div class="qa_text">
                         <span>保存狀態不太好看起來很舊了，也能鑑定嗎？</span>
-                        <span>保存狀態對於收藏來說很致命，不過也歡迎與我們聯繫，如果在容許範圍內我們依然會收購</span>
+                        <p class="qa_content">保存狀態對於收藏來說很致命，不過也歡迎與我們聯繫，如果在容許範圍內我們依然會收購</p>
                     </div>
                 </li>
                 <li class="qa_item">
                     <span class="q_ordinal">Q4.</span>
                     <div class="qa_text">
                         <span>如果透過郵寄鑑定後，無法收購能協助處分掉嗎？</span>
+                        <p class="qa_content">若是後續處理需要協助處分掉是沒問題的，也不需要另外收費。</p>
                     </div>
                 </li>
                 <li class="qa_item">
                     <span class="q_ordinal">Q5.</span>
                     <div class="qa_text">
                         <span>透過郵寄鑑定的郵資需要自己負擔嗎？</span>
+                        <p class="qa_content">是的，無論是寄送來時，或是確認無法收購後需要寄回，皆是需要自行負擔的。</p>
                     </div>
                 </li>
             </ul>
@@ -124,6 +135,12 @@
             </div>
         </div>
     </footer>
+
+    <script src="./vendors/JQuery/jquery-3.6.0.js"></script>
+    <script src="./vendors/JQuery/jquery-ui.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./vendors/aos/aos.js"></script>
+    <script src="./js/qa.js"></script>
 </body>
 
 </html>
