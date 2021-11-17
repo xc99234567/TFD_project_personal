@@ -17,26 +17,28 @@
                 <img src="./imgs/logo.png" alt="">
             </a>
         </h1>
-        <ul class="nav_wrapper">
-            <li class="nav_link"><a href="./about.html">關於我們</a></li>
-            <li class="nav_link"><a href="./news.html">最新消息</a></li>
-            <li class="nav_link product">
-                <a href="./product_list.html">商品</a>
-                <div class="product_popover">
-                    <a href="./product_list.html">
-                        <div>郵票</div>
-                    </a>
-                    <a href="./product_list.html" class="coin">
-                        <div>硬幣</div>
-                    </a>
-                    <a href="./product_list.html">
-                        <div>紙幣</div>
-                    </a>
-                </div>
-            </li>
-            <li class="nav_link current_page"><a href="./appraisal.html">鑑定收購</a></li>
-            <li class="nav_link"><a href="./qa.html">常見問題</a></li>
-            <li class="icon_wrapper">
+        <nav>
+            <ul class="menu_wrapper">
+                <li class="nav_link"><a href="./about.html">關於我們</a></li>
+                <li class="nav_link"><a href="./news.html">最新消息</a></li>
+                <li class="nav_link product">
+                    <a href="./product_list.html">商品<i class="fas fa-chevron-up"></i></a>
+                    <div class="product_popover">
+                        <a href="./product_list.html">
+                            <div>郵票</div>
+                        </a>
+                        <a href="./product_list.html" class="coin">
+                            <div>硬幣</div>
+                        </a>
+                        <a href="./product_list.html">
+                            <div>紙幣</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav_link"><a href="./appraisal.html">鑑定收購</a></li>
+                <li class="nav_link"><a href="./qa.html">常見問題</a></li>
+            </ul>
+            <div class="icon_wrapper">
                 <a href="#" aria-label='會員'><i class="fas fa-user"></i></a>
                 <a href="#">
                     <i class="fas fa-shopping-cart cart">
@@ -47,8 +49,14 @@
                         </div>
                     </i>
                 </a>
-            </li>
-        </ul>
+                <button class="hamburger hamburger--slider" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+            <div class="mask"></div>
+        </nav>
     </header>
     <main>
         <!-- banner -->
@@ -79,7 +87,7 @@
                         <img src="./imgs/step2.jpg" alt="">
                         <span>正式鑑定</span>
                     </div>
-                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <i class="fas fa-long-arrow-alt-right col_arrow"></i>
                     <div class="step_item">
                         <img src="./imgs/step3.jpg" alt="">
                         <span>價格確認</span>
@@ -128,7 +136,7 @@
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4756.275663501747!2d121.564574466453!3d25.03378982785924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6da80a7ad%3A0xacc4d11dc963103c!2z5Y-w5YyXMTAx!5e0!3m2!1szh-TW!2stw!4v1635166905828!5m2!1szh-TW!2stw"
                             class="appr_way_img" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        <span>郵寄</span>
+                        <span>親送</span>
                         <p>若是確認能夠收購的物品，則歡迎親自來店，進行實物的鑑定，確認實物的狀況。</p>
                     </div>
                 </div>
