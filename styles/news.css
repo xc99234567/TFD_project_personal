@@ -29,6 +29,13 @@ main{
     position: relative;
 }
 
+@media (max-width: 793.98px) {
+    .news_wrapper{
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+}
+
 /* news title */
 .news_wrapper h2{
     text-align: center;

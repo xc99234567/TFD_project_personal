@@ -8,11 +8,26 @@ main{
 
 /* 整個商品wrapper */
 .product_wrapper{
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 50px;
+}
+
+@media (max-width: 1199.78px) {
+    .product_wrapper{
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 991.78px) {
+    .product_wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* -------------------------------------------------------------- */
@@ -20,35 +35,72 @@ main{
 /* 左側圖wrapper */
 .product_wrapper .pro_img_wrapper{
     width: 640px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 991.78px) {
+    .product_wrapper .pro_img_wrapper{
+        margin-right: 0;
+        width: 80%;
+        height: auto;
+    }
 }
 
 /* 大圖wrapper */
 .product_wrapper .pro_img_wrapper .big_img{
     width: 100%;
-    height: 480px;
+    height: auto;
     position: relative;
 }
+
+@media (max-width: 991.78px) {
+    .product_wrapper .pro_img_wrapper .big_img{
+        margin-bottom: 20px;
+    }
+}
+
 
 /* 大圖 */
 .product_wrapper .pro_img_wrapper img{
     display: block;
     width: 100%;
-    height: 100%;
-    object-fit: fill;
+    height: 480px;
+    object-fit: cover;
 }
 
-/* 游標放大鏡hover */
-.product_wrapper .pro_img_wrapper img:hover{
-    cursor: zoom-in;
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .product_wrapper .pro_img_wrapper img{
+        height: 360px;
+    }
 }
+@media (max-width: 575.78px) {
+    .product_wrapper .pro_img_wrapper img{
+        height: 280px;
+        object-fit: contain;
+    }
+}
+
+
+/* 游標放大鏡hover */
+/* .product_wrapper .pro_img_wrapper img:hover{
+    cursor: zoom-in;
+} */
 
 /* 兩邊箭頭 */
 .product_wrapper .pro_img_wrapper i{
     position: absolute;
-    font-size: 28px;
+    font-size: 54px;
     top: 50%;
     visibility: hidden;
     opacity: 0.7;
+}
+
+@media (max-width: 575.78px) {
+    .product_wrapper .pro_img_wrapper i{
+        visibility: visible;
+    }
 }
 
 /* 右側箭頭 */
@@ -74,11 +126,24 @@ main{
     justify-content: space-between;
 }
 
+@media (max-width: 991.78px) {
+    .product_wrapper .pro_img_wrapper .small_img{
+        margin: 0 auto;
+        overflow-x: auto;
+        width: 100%;
+    }
+}
 /* 小圖 */
 .product_wrapper .pro_img_wrapper .small_img img{
     width: 120px;
     height: 90px;
     transition: linear all .2s;
+    border: 5px solid transparent;
+}
+
+
+.product_wrapper .pro_img_wrapper .small_img .act{
+    border-color: #B47804;
 }
 
 /* 小圖hover */
@@ -91,7 +156,13 @@ main{
 
 /* 右側wrapper */
 .product_wrapper .pro_text_wrapper{
-    width: 387px;
+    width: 32.25%;
+}
+
+@media (max-width: 991.78px) {
+    .product_wrapper .pro_text_wrapper{
+        width: 80%;
+    }
 }
 
 /* 品名價格 */
@@ -127,6 +198,17 @@ main{
     transition: all linear .2s;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .product_wrapper .pro_text_wrapper .pro_name{
+        display: inline-block;
+    }
+    .product_wrapper .pro_text_wrapper .cart_in_btn{
+        width: 50%;
+        float: right;
+        margin: 0;
+    }
+}
+
 /* 按鈕hover */
 .product_wrapper .pro_text_wrapper .cart_in_btn:hover{
     opacity: 0.7;
@@ -147,6 +229,15 @@ main{
 /* 介紹wrapper */
 .product_wrapper .pro_text_wrapper .pro_intro{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    .product_wrapper .pro_text_wrapper .pro_intro{
+        margin-top: 30px;
+    }
+    
 }
 
 /* 介紹標題 */
@@ -161,13 +252,17 @@ main{
 /* 介紹元素 */
 .product_wrapper .pro_text_wrapper .pro_intro .intro_item{
     width: 100%;
-    height: 50px;
+    /* height: 50px; */
     border-top: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
 }
 
 /* 介紹字 */
 .product_wrapper .pro_text_wrapper .pro_intro .intro_item span{
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 /* 類 */
@@ -179,9 +274,18 @@ main{
 
 /* 類的值 */
 .product_wrapper .pro_text_wrapper .pro_intro .intro_item span:last-child{
-    width: 296px;
+    width: 100%;
     text-align: center;
     font-size: 20px;
     font-weight: bold;
     vertical-align:middle;
+}
+
+
+/* 最後介紹文字 */
+.product_wrapper .pro_text_wrapper .pro_intro .intro_item p{
+    width: 90%;
+    font-size: 16px;
+    padding-top: 10px;
+    margin-left: 10px;
 }

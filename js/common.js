@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+    // 載入AOS
+    AOS.init();
+
     // hamburger 選單切換
     $("button.hamburger").on("click", function () {
         $(this).toggleClass("is-active");

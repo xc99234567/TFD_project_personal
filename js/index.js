@@ -1,8 +1,5 @@
 $(document).ready(function () {
 
-    // 載入AOS
-    AOS.init();
-
     // 輪播套件
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,

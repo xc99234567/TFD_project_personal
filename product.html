@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
     <title>商品</title>
 </head>
+
 <body>
     <header>
         <h1 class="logo">
@@ -19,7 +21,7 @@
             <ul class="menu_wrapper">
                 <li class="nav_link"><a href="./about.html">關於我們</a></li>
                 <li class="nav_link"><a href="./news.html">最新消息</a></li>
-                <li class="nav_link product">
+                <li class="nav_link product current_page">
                     <a href="./product_list.html">商品<i class="fas fa-chevron-up"></i></a>
                     <div class="product_popover">
                         <a href="./product_list.html">
@@ -61,16 +63,16 @@
             <!-- 左側圖 -->
             <div class="pro_img_wrapper">
                 <div class="big_img">
-                    <img src="./imgs/product1.jpg" alt="">
+                    <img src="./imgs/product1-0.jpg" alt="">
                     <i class="fas fa-chevron-left"></i>
                     <i class="fas fa-chevron-right"></i>
                 </div>
                 <div class="small_img">
-                    <img src="./imgs/product1.jpg" alt="">
+                    <img src="./imgs/product1-0.jpg" alt="" class="act">
+                    <img src="./imgs/product1-1.jpg" alt="">
                     <img src="./imgs/product1-2.jpg" alt="">
                     <img src="./imgs/product1-3.jpg" alt="">
-                    <img src="./imgs/product1.jpg" alt="">
-                    <img src="./imgs/product1-3.jpg" alt="">
+                    <img src="./imgs/product1-4.jpg" alt="">
                 </div>
             </div>
             <!-- 右側介紹 -->
@@ -98,7 +100,7 @@
                         <span>民國95年</span>
                     </div>
                     <div class="intro_item">
-                        <span>介　　紹</span>
+                        <span class="intro_text">介　　紹</span>
                         <p>
                             大版張特別版490號，故宮宋代書畫一套共4張全版張，原膠尚在，背面無任何汙損為白色，且併任何折痕。
                         </p>
@@ -139,5 +141,10 @@
             </div>
         </div>
     </footer>
+    <script src="./vendors/aos/aos.js"></script>
+    <script src="./vendors/JQuery/jquery-3.6.0.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/product.js"></script>
 </body>
+
 </html>
