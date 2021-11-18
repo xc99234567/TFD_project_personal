@@ -176,6 +176,7 @@ main{
     display: flex;
     margin-bottom: 14px;
     position: relative;
+    width: 120px;
 }
 
 /* @media (max-width: 767.98px){
