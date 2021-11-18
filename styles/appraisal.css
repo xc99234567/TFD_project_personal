@@ -56,7 +56,7 @@ main {
     margin-bottom: 100px;
     width: 49%;
     box-shadow: 1px 1px 5px black;
-    z-index: 0;
+    z-index: 1;
 }
 
 @media (min-width: 768px) {
@@ -376,6 +376,12 @@ main {
     transition: all .2s;
 }
 
+@media (max-width: 575.98px) {
+    .step1_wrapper .content .left .btn_wrapper a:first-child{
+       width: 50%;
+    }
+}
+
 /* 按鈕 */
 
 /* 按鈕hover */
@@ -389,6 +395,14 @@ main {
 .step1_wrapper .content .left .btn_wrapper a span {
     display: inline-block;
     margin-right: 20px;
+}
+
+@media (max-width: 575.98px) {
+    .step1_wrapper .content .left .btn_wrapper a span{
+        font-size: 18px;
+        font-weight: bold;
+        vertical-align: top;
+    }
 }
 
 /* 右圖 */
@@ -463,9 +477,15 @@ main {
     box-shadow: 1px 1px 5px black;
 }
 
-@media (max-width: 767.98px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
     .step2_wrapper .step2_content .content_wrapper .appr_way{
         width: 80%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .step2_wrapper .step2_content .content_wrapper .appr_way{
+        width: 90%;
     }
 }
 

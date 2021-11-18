@@ -66,8 +66,8 @@
         <div class="appraisal_wrapper">
             <h2>鑑定收購</h2>
             <div class="appr_content">
-                <img src="./imgs/appraisal1.jpg" alt="">
-                <div class="text_bg">
+                <img src="./imgs/appraisal1.jpg" alt="" data-aos="flip-left">
+                <div class="text_bg" data-aos="flip-left">
                     <span>如果你有不知道該怎麼處理，或者想要割愛的，郵票、現行已沒在或紙鈔流通的硬幣，先別急著丟掉，其中說不定有價值連城的稀世珍寶，都歡迎來找我們鑑定，若是有價值我們都很願意收購。</span>
                 </div>
             </div>
@@ -78,22 +78,22 @@
             <div class="steps_content">
                 <h2>鑑定收購流程</h2>
                 <div class="steps">
-                    <div class="step_item">
-                        <img src="./imgs/step1.jpg" alt="">
+                    <div class="step_item" id="step1" data-aos="zoom-in-down">
+                        <img src="./imgs/step1.jpg" alt="" data-aos="zoom-in-down">
                         <span>事前聯絡</span>
                     </div>
-                    <i class="fas fa-long-arrow-alt-right"></i>
-                    <div class="step_item">
+                    <i class="fas fa-long-arrow-alt-right" data-aos="zoom-in-down"></i>
+                    <div class="step_item" id="step2" data-aos="zoom-in-down">
                         <img src="./imgs/step2.jpg" alt="">
                         <span>正式鑑定</span>
                     </div>
-                    <i class="fas fa-long-arrow-alt-right col_arrow"></i>
-                    <div class="step_item">
+                    <i class="fas fa-long-arrow-alt-right col_arrow" data-aos="zoom-in-down"></i>
+                    <div class="step_item" id="step3" data-aos="zoom-in-down">
                         <img src="./imgs/step3.jpg" alt="">
                         <span>價格確認</span>
                     </div>
-                    <i class="fas fa-long-arrow-alt-right"></i>
-                    <div class="step_item">
+                    <i class="fas fa-long-arrow-alt-right" data-aos="zoom-in-down"></i>
+                    <div class="step_item" id="step4" data-aos="zoom-in-down">
                         <img src="./imgs/step4.jpg" alt="">
                         <span>成交付款</span>
                     </div>
@@ -118,7 +118,7 @@
                         </a>
                     </div>
                 </div>
-                <img src="./imgs/step1.jpg" alt="">
+                <img src="./imgs/step1.jpg" alt="" data-aos="flip-left">
             </div>
         </div>
 
@@ -127,12 +127,12 @@
             <div class="step2_content">
                 <h2>Step.2　兩種鑑定方式</h2>
                 <div class="content_wrapper">
-                    <div class="appr_way">
+                    <div class="appr_way" data-aos="fade-up">
                         <img src="./imgs/send.jpg" alt="" class="appr_way_img">
                         <span>郵寄</span>
                         <p>若是確認能夠收購的物品，但是無法親自到店時，可選擇郵寄的方式到本店進行實物鑑定，來確認實物的狀況，但是其中所產生的郵資需要由顧客自行負擔。</p>
                     </div>
-                    <div class="appr_way">
+                    <div class="appr_way" data-aos="fade-up">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4756.275663501747!2d121.564574466453!3d25.03378982785924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6da80a7ad%3A0xacc4d11dc963103c!2z5Y-w5YyXMTAx!5e0!3m2!1szh-TW!2stw!4v1635166905828!5m2!1szh-TW!2stw"
                             class="appr_way_img" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -204,6 +204,35 @@
     <script src="./vendors/JQuery/jquery-3.6.0.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/appraisal.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#step1").click(function () {
+                $("html, body").animate({
+                    scrollTop: $(".step1_wrapper").offset().top
+                }, { duration: 500, easing: "swing" });
+                return false;
+            });
+            $("#step2").click(function () {
+                $("html, body").animate({
+                    scrollTop: $(".step2_wrapper").offset().top
+                }, { duration: 500, easing: "swing" });
+                return false;
+            });
+            $("#step3").click(function () {
+                $("html, body").animate({
+                    scrollTop: $(".step34_wrapper").offset().top
+                }, { duration: 500, easing: "swing" });
+                return false;
+            });
+            $("#step4").click(function () {
+                $("html, body").animate({
+                    scrollTop: $(".step34_wrapper").offset().top
+                }, { duration: 500, easing: "swing" });
+                return false;
+            });
+        });
+    </script>
 </body>
 
 </html>
