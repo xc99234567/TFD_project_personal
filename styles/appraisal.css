@@ -376,6 +376,11 @@ main {
     transition: all .2s;
 }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .step1_wrapper .content .left .btn_wrapper a:first-child{
+       width: 45%;
+    }
+}
 @media (max-width: 575.98px) {
     .step1_wrapper .content .left .btn_wrapper a:first-child{
        width: 50%;
