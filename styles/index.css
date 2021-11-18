@@ -2,6 +2,7 @@
 @import url(../vendors/carousel/swiper/swiper.css);
 main {
     margin-top: 25px;
+    overflow-x: hidden;
 }
 
 /* ---------------------------------------------- */
@@ -114,6 +115,7 @@ main {
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 /* 區塊標題 */
@@ -313,8 +315,8 @@ main {
 
 @media (max-width: 1199.98px) {
     .product_wrapper {
-        padding: 0 20px;
         box-sizing: border-box;
+        /* padding: 0 20px; */
     }
 }
 
@@ -479,6 +481,7 @@ main {
 @media (min-width: 996px) and (max-width: 1199.98px) {
     .feature_wrapper .fea_content_wrapper .fea_item {
         padding: 0 20px;
+        box-sizing: border-box;
     }
     .feature_wrapper .bg_1 {
         top: 110px;
@@ -537,7 +540,7 @@ main {
 }
 
 /* 調整圖片文字大小 */
-@media (min-width: 370px) and (max-width: 575.98px) {
+@media (min-width: 414px) and (max-width: 575.98px) {
     .feature_wrapper .fea_content_wrapper .fea_item img {
         width: 360px;
     }
@@ -551,7 +554,7 @@ main {
 }
 
 /* 調整圖片文字大小 */
-@media (max-width: 370.98px) {
+@media (max-width: 413.98px) {
     .feature_wrapper .fea_content_wrapper .fea_item img {
         width: 300px;
     }
