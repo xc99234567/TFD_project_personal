@@ -5,6 +5,7 @@
 @import url(../vendors/hamburgers/hamburgers.css);
 * {
     font-family: "Microsoft JhengHei", sans-serif;
+    font-weight: bold;
 }
 
 body {

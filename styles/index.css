@@ -15,7 +15,7 @@ main {
     margin-bottom: 100px;
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 767.98px) {
     .swiper {
         height: 360px;
     }
@@ -29,7 +29,7 @@ main {
 
 /* 套件給的 */
 
-.swiper-slide {
+.swiper-slide{
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -103,272 +103,82 @@ main {
 /* 下面的點 */
 
 .swiper .swiper-pagination .swiper-pagination-bullet-active {
-    background: rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 /* ---------------------------------------------- */
 
 /* 主要產品區塊wrapper */
-
-.product_wrapper {
+html,
+body {
     position: relative;
-    margin: 0 auto;
-    max-width: 1200px;
-    width: 100%;
-    box-sizing: border-box;
+    height: 100%;
 }
 
-/* 區塊標題 */
+.mySwiper-pro {
+    width: 50%;
+    height: 50%;
+}
 
-.product_wrapper h2 {
+.mySwiper-pro h2{
     font-size: 28px;
-    font-weight: bold;
-    text-align: center;
     margin-bottom: 50px;
-    overflow: hidden;
-}
-
-/* 整個產品wrapper */
-
-.product_wrapper .product_outer .product_ele {
-    width: 250px;
-    height: 300px;
-    border-radius: 20px;
-    box-shadow: 2px 2px 5px black;
-}
-
-/* 商品連結 */
-
-.product_wrapper .product_outer .product_ele a {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-/* 產品圖 */
-
-.product_wrapper .product_outer .product_ele a img {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    object-fit: cover;
-}
-
-/* 產品圖遮色片 */
-
-.product_wrapper .product_outer .product_ele a span {
-    display: inline-block;
-    color: rgba(255, 255, 255, .8);
-    font-size: 28px;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, .5);
     text-align: center;
-    line-height: 331px;
+}
+
+.mySwiper-pro .swiper-slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
     font-weight: bold;
-    position: absolute;
-    left: 0;
+    color: #fff;
 }
-
-/* 目前商品 */
-
-.product_wrapper .cur_product {
-    margin: 0 auto;
-    position: relative;
-    width: 300px;
-    height: 350px;
-    border-radius: 20px;
-    box-shadow: 2px 2px 5px black;
-    overflow: hidden;
-}
-
-/* 目前商品連結 */
-
-.product_wrapper .cur_product a {
-    display: inline-block;
+.mySwiper-pro .swiper-slide a{
+    display: block;
     width: 100%;
     height: 100%;
-    border-radius: 20px;
 }
-
-/* 目前商品圖 */
-.product_wrapper .cur_product a img {
+.mySwiper-pro .swiper-slide a .black-bg{
+    position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 20px;
-    object-fit: cover;
-    transition: all 0.2s linear;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition-property: height, top;
+    transition-duration: 1s;
 }
-
-/* 圖片hover放大效果 */
-
-.product_wrapper .product_outer .cur_product:hover a img {
-    transform: scale(1.05);
-}
-
-/* 目前商品文字 */
-
-.product_wrapper .product_outer .cur_product a span {
-    display: inline-block;
+.mySwiper-pro .swiper-slide a .black-bg .pro-name{
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.8);
     position: absolute;
+    top: calc(50% - 16px);
+    left: calc(50% - 32px);
+}
+.mySwiper-pro .swiper-slide:hover a .black-bg{
+    height: 100px;
     bottom: 0;
-    color: rgba(255, 255, 255, .8);
-    font-size: 28px;
-    width: 100%;
-    height: 20%;
-    border-radius: 0 0 20px 20px;
-    background-color: rgba(0, 0, 0, .7);
-    text-align: center;
-    line-height: 70px;
-    font-weight: bold;
-    left: 0;
+    top: 80%;
 }
 
-@media (min-width: 768px) {
-    /* 黑色商品位置 */
-    .product_wrapper .product_outer {
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-    }
-    /* 右側商品位置 */
-    .product_wrapper .product_outer .right_pro {
-        margin-left: calc(100% - 500px);
+@media (max-width: 768px) {
+    .mySwiper-pro {
+        width: 70%;
+        height: 70%;
     }
 
-    /* 商品間的橫線 */
-    .left_pro::before {
-        content: "";
-        position: absolute;
-        width: 75%;
-        left: 12.5%;
-        height: 10px;
-        top: 150px;
-        background-color: #D5B2A0;
-        z-index: -1;
-        box-shadow: 0px 1px 10px gray;
-    }
-    /* 商品間的左斜線 */
-    .left_pro::after {
-        content: "";
-        position: absolute;
-        width: 50%;
-        height: 10px;
-        top: 300px;
-        left: 0;
-        z-index: -1;
-        background-color: #D5B2A0;
-        transform: rotate(45deg);
-        box-shadow: 0px 1px 10px gray;
-    }
-    /* 商品間的右斜線 */
-    .right_pro::before {
-        content: "";
-        position: absolute;
-        width: 50%;
-        height: 10px;
-        top: 300px;
-        left: 50%;
-        z-index: -1;
-        background-color: #D5B2A0;
-        transform: rotate(-45deg);
-        box-shadow: 0px 1px 10px gray;
-    }
-    /* 箭頭 */
-    .product_wrapper .arrow_wrapper {
-        position: absolute;
-        display: inline-block;
-        width: 100px;
-        height: 100px;
-        bottom: 10%;
-        background: black;
-        text-align: center;
-        border-radius: 50%;
-        opacity: 0.7;
-        transition: all .2s linear;
-    }
-    /* 箭頭hover */
-    .product_wrapper .arrow_wrapper:hover {
-        opacity: 1;
-    }
-    /* 左右箭頭位置 */
-    .product_wrapper .arr_left {
-        left: 10%;
-        transform: rotate(45deg);
-    }
-    .product_wrapper .arr_right {
-        right: 10%;
-        transform: rotate(-45deg);
-    }
-    /* 箭頭樣式 */
-    .product_wrapper .arrow_wrapper i {
-        font-size: 48px;
-        line-height: 100px;
-        color: rgba(255, 255, 255, .8);
-    }
-}
-
-/* 加左右padding */
-
-@media (max-width: 1199.98px) {
-    .product_wrapper {
-        box-sizing: border-box;
-        /* padding: 0 20px; */
-    }
-}
-
-/* <=768 */
-
-@media (max-width: 767.98px) {
-    /* 商品容器 */
-    .product_wrapper .product_outer {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    /* 商品 */
-    .product_wrapper .product_outer .product_ele {
-        width: 200px;
-        height: 240px;
-        margin: 0 auto;
-        margin-bottom: 20px;
-        overflow: hidden;
-        margin: 0 10px;
-        margin-bottom: 20px;
-    }
-    /* 商品圖 */
-    .product_wrapper .product_outer .product_ele a img {
-        transition: all 0.2s linear;
-    }
-    /* 商品圖hover */
-    .product_wrapper .product_outer .product_ele:hover a img {
-        transform: scale(1.05);
-    }
-    /* 商品圖文字 */
-    .product_wrapper .product_outer .product_ele a span {
-        font-size: 24px;
-        height: 20%;
-        line-height: 48px;
+    .mySwiper-pro .swiper-slide a .black-bg{
+        height: 50%;
         bottom: 0;
-        border-radius: 0 0 20px 20px;
-        background-color: rgba(0, 0, 0, .7);
+        top: 80%;
     }
-    /* 目前商品 */
-    .product_wrapper .cur_product {
-        width: 200px;
-        height: 240px;
-    }
-    /* 目前商品文字 */
-    .product_wrapper .cur_product a span {
-        font-size: 24px;
-        line-height: 48px;
-    }
-    /* 箭頭消失 */
-    .product_wrapper .arrow_wrapper {
-        display: none;
+
+    .mySwiper-pro .swiper-slide a .black-bg .pro-name{
+        top: 5%;
+        left: calc(50% - 32px);
     }
 }
 
@@ -435,7 +245,7 @@ main {
     width: 45%;
     /* height: 384px; */
     border-radius: 20px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* 特色小標題 */
@@ -463,8 +273,8 @@ main {
     z-index: -1;
     width: 100%;
     height: 30.54%;
-    background-color: #D5B2A0;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+    background-color: #d5b2a0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* 文字背景色塊位置1 */
@@ -493,7 +303,8 @@ main {
 
 /* 微調文字背景色塊 */
 @media (min-width: 768px) and (max-width: 995.98px) {
-    .feature_wrapper .fea_content_wrapper .fea_item {}
+    .feature_wrapper .fea_content_wrapper .fea_item {
+    }
     .feature_wrapper .bg_1 {
         top: 100px;
     }
@@ -515,7 +326,7 @@ main {
         margin-top: 20px;
         padding: 10px;
         border-radius: 20px;
-        background-color: #D5B2A0;
+        background-color: #d5b2a0;
     }
     /* 下面的元素 */
     .feature_wrapper .fea_content_wrapper .fea_item2 {
@@ -548,7 +359,7 @@ main {
         width: 360px;
     }
 
-    .feature_wrapper .fea_content_wrapper .fea_item h3 p{
+    .feature_wrapper .fea_content_wrapper .fea_item h3 p {
         font-size: 14px;
     }
 }
@@ -562,7 +373,7 @@ main {
         width: 300px;
     }
 
-    .feature_wrapper .fea_content_wrapper .fea_item h3 p{
+    .feature_wrapper .fea_content_wrapper .fea_item h3 p {
         font-size: 14px;
     }
 }
@@ -573,7 +384,7 @@ main {
 
 .news_wrapper {
     width: 100%;
-    background-color: #CBC1A9;
+    background-color: #cbc1a9;
 }
 
 /* 內容區 */
@@ -586,7 +397,7 @@ main {
     margin: 0 auto;
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 767.98px) {
     .news_wrapper .news_content_wrapper {
         flex-direction: column;
         align-items: center;
@@ -606,7 +417,7 @@ main {
     vertical-align: middle;
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 767.98px) {
     .news_wrapper .news_content_wrapper .img_wrapper {
         margin: 0 auto;
         margin-top: 50px;
@@ -624,25 +435,25 @@ main {
     text-decoration: none;
     color: black;
     font-size: 28px;
-    background-color: #D5B2A0;
+    background-color: #d5b2a0;
     text-align: center;
     height: 12.5%;
     padding-top: 1%;
     width: 50%;
     border-radius: 10px;
     box-shadow: 1px 1px 5px black;
-    transition: transform .2s;
+    transition: transform 0.2s;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     /* 最新消息按鈕 */
     .news_wrapper .news_content_wrapper .img_wrapper a:hover {
         transform: scale(1.1);
     }
 }
 
-@media (max-width: 767.98px){
-    .news_wrapper .news_content_wrapper .img_wrapper a{
+@media (max-width: 767.98px) {
+    .news_wrapper .news_content_wrapper .img_wrapper a {
         display: block;
         width: 70%;
         margin-top: 0;
@@ -654,7 +465,7 @@ main {
         text-align: center;
     }
 
-    .news_wrapper .news_content_wrapper .img_wrapper a i{
+    .news_wrapper .news_content_wrapper .img_wrapper a i {
         display: none;
     }
 }
@@ -667,7 +478,7 @@ main {
     width: calc(100% - 442.24px);
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 767.98px) {
     .news_wrapper .news_content_wrapper .news_ele_wrapper {
         width: 70%;
         height: 300px;
@@ -677,17 +488,17 @@ main {
 /* 各項消息 */
 
 .news_wrapper .news_content_wrapper .news_ele_wrapper li {
-    background-color: #EEECE1;
+    background-color: #eeece1;
     height: 80px;
     width: 100%;
     border-radius: 10px;
     box-shadow: 1px 1px 5px black;
     margin-bottom: 10px;
-    transition: opacity .5s;
+    transition: opacity 0.5s;
 }
 
-@media (max-width: 767.98px){
-    .news_wrapper .news_content_wrapper .news_ele_wrapper li{
+@media (max-width: 767.98px) {
+    .news_wrapper .news_content_wrapper .news_ele_wrapper li {
         width: 100%;
     }
 }
@@ -714,7 +525,6 @@ main {
     display: block;
     color: #000;
     font-size: 18px;
-
 }
 
 /* 文字日期 */
@@ -729,7 +539,7 @@ main {
     font-size: 16px;
 }
 
-.news_wrapper .news_content_wrapper .news_ele_wrapper li a .news_title{
+.news_wrapper .news_content_wrapper .news_ele_wrapper li a .news_title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -738,16 +548,15 @@ main {
 
 /* read more */
 
-.news_wrapper .news_content_wrapper .news_ele_wrapper>a {
+.news_wrapper .news_content_wrapper .news_ele_wrapper > a {
     position: absolute;
     text-decoration: none;
-    color: #C9211E;
+    color: #c9211e;
     bottom: 0;
     right: 0;
 }
 
-@media (max-width: 767.98px){
-    .news_wrapper .news_content_wrapper .news_ele_wrapper>a{
-
+@media (max-width: 767.98px) {
+    .news_wrapper .news_content_wrapper .news_ele_wrapper > a {
     }
 }

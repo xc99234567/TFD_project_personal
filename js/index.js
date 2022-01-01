@@ -14,4 +14,9 @@ $(document).ready(function () {
             prevEl: ".swiper-button-prev",
         },
     });
+
+    var swiper2 = new Swiper(".mySwiper-pro", {
+        effect: "cards",
+        grabCursor: true,
+    });
 });

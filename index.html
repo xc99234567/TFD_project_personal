@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
     <title>樂收郵幣社</title>
@@ -72,33 +73,40 @@
         </div>
 
         <!-- 主要商品 -->
-        <div class="product_wrapper">
+        <div class="swiper mySwiper-pro">
             <h2 class="animate__animated animate__tada">主要商品</h2>
-            <!-- 商品 -->
-            <div class="product_outer">
-                <div class="product_ele left_pro">
-                    <a href="#">
-                        <img src="./imgs/main_product1.jpg" alt="">
-                        <span>郵票</span>
-                    </a>
-                </div>
-                <div class="product_ele right_pro">
-                    <a href="#">
-                        <img src="./imgs/main_product3.jpg" alt="">
-                        <span>紙幣</span>
-                    </a>
-                </div>
-                <!-- 目前商品 -->
-                <div class="product_ele cur_product">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
                     <a href="./product_list.html">
-                        <img src="./imgs/main_product2.jpg" alt="">
-                        <span>硬幣</span>
+                        <img src="./imgs/main_product1.jpg">
+                        <div class="black-bg">
+                            <span class="pro-name">
+                                郵票
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="./product_list.html">
+                        <img src="./imgs/main_product2.jpg">
+                        <div class="black-bg">
+                            <span class="pro-name">
+                                硬幣
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="./product_list.html">
+                        <img src="./imgs/main_product3.jpg">
+                        <div class="black-bg">
+                            <span class="pro-name">
+                                紙幣
+                            </span>
+                        </div>
                     </a>
                 </div>
             </div>
-            <!-- 箭頭按鈕 -->
-            <a href="#" class="arrow_wrapper arr_left"><i class="fas fa-arrow-left"></i></a>
-            <a href="#" class="arrow_wrapper arr_right"><i class="fas fa-arrow-right"></i></a>
         </div>
 
         <!-- 滾動背景 -->
@@ -217,10 +225,13 @@
     </footer>
 
     <script src="./vendors/JQuery/jquery-3.6.0.js"></script>
-    <script src="./vendors/carousel/swiper/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./vendors/aos/aos.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/common.js"></script>
+    <script>
+
+    </script>
 </body>
 
 </html>
